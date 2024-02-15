@@ -41,10 +41,9 @@ export const FlipCardsContainer = () => {
     <Container>
       <FlipCardRow>
         <BlurMText>
-          We believe in the power of storytelling and its ability to connect
-          people. We are dedicated to creating experiences that resonate with
-          your audience, leaving a lasting impression that goes beyond the
-          event.
+          Dive into the digital age with bespoke strategies that resonate. From
+          SEO to PPC, content marketing to social media, we craft campaigns that
+          connect and convert.
         </BlurMText>
       </FlipCardRow>
       <FlipCardColumn>
@@ -55,12 +54,11 @@ export const FlipCardsContainer = () => {
       </FlipCardColumn>
       <FlipCardRow>
         <BlurMText>
-          We believe in the power of storytelling and its ability to connect
-          people. We are dedicated to creating experiences that resonate with
-          your audience, leaving a lasting impression that goes beyond the
-          event.
+          Stand out with stunning visuals that tell your brand&apos;s story. Our
+          designers dream big, delivering graphics, websites, and branding that
+          break the mold. Make your mark on the digital landscape.
         </BlurMText>
       </FlipCardRow>
     </Container>
-  );
+  )
 };

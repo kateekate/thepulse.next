@@ -21,6 +21,7 @@ export const MText = styled(Text)`
 export const BlurMText = styled(MText)`
   backdrop-filter: blur(5px);
   padding: 15px;
+  text-align: justify;
 `;
 
 export const LText = styled(Text)`

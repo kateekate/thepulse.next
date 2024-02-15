@@ -30,8 +30,8 @@ export const ServiceContainer = () => {
         </MText>
         <XXLText>Follow time</XXLText>
         <MText>
-          We are gradually adding new functionality and we welcome your
-          suggestions and feedback.
+          We invite you to be an integral part of this journey by sharing your
+          suggestions with us.
         </MText>
       </TextContainer>
       <LText>Our Services</LText>

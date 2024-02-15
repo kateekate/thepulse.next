@@ -54,7 +54,9 @@ const LandingComponent = () => {
             <Parallax speed={-6}>
               <SubHeader>Innovate. Illuminate. Inspire.</SubHeader>
             </Parallax>
-            <DescriptionContainer />
+            <Parallax speed={-6}>
+              <DescriptionContainer />
+            </Parallax>
           </TextContainer>
 
           <CarouselContainer />
