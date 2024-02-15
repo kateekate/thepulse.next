@@ -111,7 +111,7 @@ export const FeedbackContainer = () => {
       const formProps = {
         name: formData.get("name"),
         email: formData.get("email"),
-        company: formData.get("company"),
+        companyName: formData.get("companyName"),
         message: formData.get("message"),
       };
 
