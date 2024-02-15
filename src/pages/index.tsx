@@ -17,7 +17,7 @@ import { ImageContainer } from "@/components/shared/ImageContainer";
 import { FlipCardsContainer } from "@/components/FlipCardsContainer/FlipCardsContainer";
 import { ServiceContainer } from "@/components/ServiceContainer/ServiceContainer";
 import { PlayBtnContainer } from "@/components/PlayBtnContainer/PlayBtnContainer";
-import { FeedbackBtn } from "@/components/FeedbackContainer/FeedbackBtn";
+import { FeedbackContainer } from "@/components/FeedbackContainer/FeedbackContainer";
 import { FooterContainer } from "@/components/FooterContainer/FooterContainer";
 import poster1 from "../../public/images/poster1.png";
 import poster2 from "../../public/images/poster2.png";
@@ -95,7 +95,7 @@ const LandingComponent = () => {
           <Parallax speed={-5}>
             <PlayBtnContainer />
           </Parallax>
-          <FeedbackBtn />
+          <FeedbackContainer />
           <Parallax speed={-6}>
             <FooterContainer />
           </Parallax>
