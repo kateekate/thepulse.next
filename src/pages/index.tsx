@@ -1,4 +1,3 @@
-import { ChakraProvider } from "@chakra-ui/react";
 import styled from "styled-components";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import {
@@ -22,7 +21,6 @@ import { FeedbackBtn } from "@/components/FeedbackContainer/FeedbackBtn";
 import { FooterContainer } from "@/components/FooterContainer/FooterContainer";
 import poster1 from "../../public/images/poster1.png";
 import poster2 from "../../public/images/poster2.png";
-import { theme } from "@/styles/theme";
 
 const BodyContainer = styled.div`
   padding: 0;
@@ -45,65 +43,63 @@ const MainContainer = styled.div`
 
 const LandingComponent = () => {
   return (
-    <ChakraProvider theme={theme}>
-      <ParallaxProvider>
-        <BodyContainer>
-          <Header>Pulse</Header>
-          <MainContainer>
-            <TextContainer>
-              <Parallax speed={-6}>
-                <LText>From Concept to Creation</LText>
-              </Parallax>
-              <Parallax speed={-6}>
-                <SubHeader>Innovate. Illuminate. Inspire.</SubHeader>
-              </Parallax>
-              <DescriptionContainer />
-            </TextContainer>
-
-            <CarouselContainer />
-
-            <ImageContainer src={poster1.src} alt="poster1" />
-
+    <ParallaxProvider>
+      <BodyContainer>
+        <Header>Pulse</Header>
+        <MainContainer>
+          <TextContainer>
             <Parallax speed={-6}>
-              <SubHeader>
-                Think Big & Designing Today for Tomorrow&apos;s Stories
-              </SubHeader>
+              <LText>From Concept to Creation</LText>
             </Parallax>
             <Parallax speed={-6}>
-              <TextContainerWithPadding>
-                <XlText>
-                  Our team of creative minds and technical experts are
-                  passionate about delivering exceptional experiences that
-                  captivate and inspire.
-                </XlText>
-
-                <MText>
-                  We believe in the power of storytelling and its ability to
-                  connect people. We are dedicated to creating experiences that
-                  resonate with your audience, leaving a lasting impression that
-                  goes beyond the event.
-                </MText>
-              </TextContainerWithPadding>
+              <SubHeader>Innovate. Illuminate. Inspire.</SubHeader>
             </Parallax>
-            <FlipCardsContainer />
+            <DescriptionContainer />
+          </TextContainer>
 
-            <Parallax speed={-6}>
-              <ServiceContainer />
-            </Parallax>
+          <CarouselContainer />
 
-            <ImageContainer src={poster2.src} alt="poster2" />
+          <ImageContainer src={poster1.src} alt="poster1" />
 
-            <Parallax speed={-5}>
-              <PlayBtnContainer />
-            </Parallax>
-            <FeedbackBtn />
-            <Parallax speed={-6}>
-              <FooterContainer />
-            </Parallax>
-          </MainContainer>
-        </BodyContainer>
-      </ParallaxProvider>
-    </ChakraProvider>
+          <Parallax speed={-6}>
+            <SubHeader>
+              Think Big & Designing Today for Tomorrow&apos;s Stories
+            </SubHeader>
+          </Parallax>
+          <Parallax speed={-6}>
+            <TextContainerWithPadding>
+              <XlText>
+                Our team of creative minds and technical experts are passionate
+                about delivering exceptional experiences that captivate and
+                inspire.
+              </XlText>
+
+              <MText>
+                We believe in the power of storytelling and its ability to
+                connect people. We are dedicated to creating experiences that
+                resonate with your audience, leaving a lasting impression that
+                goes beyond the event.
+              </MText>
+            </TextContainerWithPadding>
+          </Parallax>
+          <FlipCardsContainer />
+
+          <Parallax speed={-6}>
+            <ServiceContainer />
+          </Parallax>
+
+          <ImageContainer src={poster2.src} alt="poster2" />
+
+          <Parallax speed={-5}>
+            <PlayBtnContainer />
+          </Parallax>
+          <FeedbackBtn />
+          <Parallax speed={-6}>
+            <FooterContainer />
+          </Parallax>
+        </MainContainer>
+      </BodyContainer>
+    </ParallaxProvider>
   );
 };
 

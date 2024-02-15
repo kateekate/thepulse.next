@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { TriangleUpIcon } from "@chakra-ui/icons";
-import { IconButton } from "@chakra-ui/react";
+
 import backgroundImg from "../../../public/images/playContainerImg/background.jpeg";
 
 const Container = styled.div`
@@ -86,19 +86,33 @@ const ButtonWrapper = styled.div`
   }
 `;
 
+const CustomIconButton = styled.button`
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 100%;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+`;
+
 export const PlayBtnContainer = () => {
   return (
     <Container>
       <InnerContainer>
         <ButtonWrapper>
-          <Button type="button">
-            <IconButton
-              aria-label="Play"
-              icon={<TriangleUpIcon transform="rotate(90deg)" />}
-              onClick={() => console.log("Play")}
+          <CustomIconButton type="button" onClick={() => console.log("Play")}>
+            <TriangleUpIcon
+              transform="rotate(90deg)"
               boxSize="20px"
+              color={"white"}
             />
-          </Button>
+          </CustomIconButton>
         </ButtonWrapper>
       </InnerContainer>
       <Line />
