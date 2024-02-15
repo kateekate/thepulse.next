@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import {
   Modal,
@@ -98,12 +98,43 @@ const SendButton = styled(Button)`
 export const FeedbackContainer = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const formRef = useRef<HTMLFormElement>(null); // HTMLFormElement для указания типа ref
+
   const onClose = () => setIsOpen(false);
   const onOpen = () => setIsOpen(true);
 
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+
+    if (formRef.current) {
+      const formData = new FormData(formRef.current);
+      const formProps = {
+        name: formData.get("name"),
+        email: formData.get("email"),
+        company: formData.get("company"),
+        message: formData.get("message"),
+      };
+
+      const response = await fetch("/api/sendFeedback", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formProps),
+      });
+
+      if (response.ok) {
+        console.log("Message sent");
+        onClose();
+      } else {
+        console.error("Failed to send email");
+      }
+    }
+  };
+
   return (
     <>
-      <StyledButton onClick={onOpen}>Check the pulse</StyledButton>
+      {!isOpen && <StyledButton onClick={onOpen}>Check the pulse</StyledButton>}
       <Modal
         isOpen={isOpen}
         onClose={onClose}
@@ -117,11 +148,11 @@ export const FeedbackContainer = () => {
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody paddingBottom="20px">
-            <form>
-              <StyledInput placeholder="Name" />
-              <StyledInput placeholder="Email" />
-              <StyledInput placeholder="Company" />
-              <StyledTextarea placeholder="Message" />
+            <form onSubmit={handleSubmit} ref={formRef}>
+              <StyledInput name="name" placeholder="Name" />
+              <StyledInput name="email" placeholder="Email" />
+              <StyledInput name="companyName" placeholder="Company" />
+              <StyledTextarea name="message" placeholder="Message" />
               <SendButton type="submit">Send</SendButton>
             </form>
           </ModalBody>
