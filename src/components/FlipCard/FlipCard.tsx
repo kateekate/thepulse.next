@@ -35,8 +35,8 @@ const PulsingContainer = styled(Container)`
 
 const Card = styled(a.div)`
   position: absolute;
-  width: 250px;
-  height: 150px;
+  width: 24vw;
+  height: 17vh;
   cursor: pointer;
   will-change: transform, opacity;
   background-size: cover;

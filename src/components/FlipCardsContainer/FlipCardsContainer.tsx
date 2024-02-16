@@ -13,7 +13,7 @@ const Container = styled.div`
   flex-direction: row;
   align-items: center;
   text-align: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding: 20px;
   background-image: url(${Animation1.src});
   background-size: cover;
@@ -60,5 +60,5 @@ export const FlipCardsContainer = () => {
         </BlurMText>
       </FlipCardRow>
     </Container>
-  )
+  );
 };
