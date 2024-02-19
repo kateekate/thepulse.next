@@ -10,6 +10,10 @@ const Container = styled.div`
   align-items: center;
   gap: 20px;
   background-color: #000000;
+
+  @media only screen and (max-width: 450px) {
+    padding: 0 0 100px 0;
+  }
 `;
 
 const Footer = styled.footer`

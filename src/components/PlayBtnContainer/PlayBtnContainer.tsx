@@ -12,6 +12,10 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: 450px) {
+    margin: 0;
+  }
 `;
 
 const InnerContainer = styled.div`
@@ -25,6 +29,10 @@ const InnerContainer = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 20%;
+
+  @media only screen and (max-width: 450px) {
+    height: 70%;
+  }
 `;
 
 const Line = styled.div`

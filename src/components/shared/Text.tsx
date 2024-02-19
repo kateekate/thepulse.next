@@ -145,4 +145,8 @@ export const FooterHeader = styled.p`
   &:hover {
     animation: ${VioletTextAnimation} 0.5s forwards;
   }
+
+  @media only screen and (max-width: 450px) {
+    color: #ffffffab;
+  }
 `;
