@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-const VideoBackground = ({ src }) => {
+interface VideoBackgroundProps {
+  src: string;
+}
+
+const VideoBackground = ({ src }: VideoBackgroundProps) => {
   return (
     <StyledVideo autoPlay muted loop playsInline>
       <source src={src} type="video/mp4" />

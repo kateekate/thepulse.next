@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import styled from "styled-components";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import {
   Header,
