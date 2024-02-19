@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import {
@@ -46,19 +47,40 @@ const MainContainer = styled.div`
 `;
 
 const LandingComponent = () => {
+  const [parallaxSpeed, setParallaxSpeed] = useState(-6);
+
+  useEffect(() => {
+    const updateParallaxSpeed = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth <= 450) {
+        setParallaxSpeed(-2);
+      } else {
+        setParallaxSpeed(-6);
+      }
+    };
+
+    updateParallaxSpeed();
+
+    window.addEventListener("resize", updateParallaxSpeed);
+
+    return () => {
+      window.removeEventListener("resize", updateParallaxSpeed);
+    };
+  }, []);
+
   return (
     <ParallaxProvider>
       <BodyContainer>
         <Header>Pulse</Header>
         <MainContainer>
           <TextContainer>
-            <Parallax speed={-6}>
+            <Parallax speed={parallaxSpeed}>
               <LText>From Concept to Creation</LText>
             </Parallax>
-            <Parallax speed={-6}>
+            <Parallax speed={parallaxSpeed}>
               <SubHeader>Innovate. Illuminate. Inspire.</SubHeader>
             </Parallax>
-            <Parallax speed={-6}>
+            <Parallax speed={parallaxSpeed}>
               <DescriptionContainer />
             </Parallax>
           </TextContainer>
@@ -67,12 +89,12 @@ const LandingComponent = () => {
 
           <ImageContainer src={poster1.src} alt="poster1" />
 
-          <Parallax speed={-6}>
+          <Parallax speed={parallaxSpeed}>
             <SubHeader>
               Think Big & Designing Today for Tomorrow&apos;s Stories
             </SubHeader>
           </Parallax>
-          <Parallax speed={-6}>
+          <Parallax speed={parallaxSpeed}>
             <TextContainerWithPadding>
               <XlText>
                 Our team of creative minds and technical experts are passionate
@@ -90,17 +112,17 @@ const LandingComponent = () => {
           </Parallax>
           <FlipCardsContainer />
 
-          <Parallax speed={-6}>
+          <Parallax speed={parallaxSpeed}>
             <ServiceContainer />
           </Parallax>
 
           <ImageContainer src={poster2.src} alt="poster2" />
 
-          <Parallax speed={-5}>
+          <Parallax speed={parallaxSpeed}>
             <PlayBtnContainer />
           </Parallax>
           <FeedbackContainer />
-          <Parallax speed={-6}>
+          <Parallax speed={parallaxSpeed}>
             <FooterContainer />
           </Parallax>
         </MainContainer>
