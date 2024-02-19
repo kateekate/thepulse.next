@@ -53,7 +53,7 @@ const LandingComponent = () => {
     const updateParallaxSpeed = () => {
       const screenWidth = window.innerWidth;
       if (screenWidth <= 450) {
-        setParallaxSpeed(-2);
+        setParallaxSpeed(0);
       } else {
         setParallaxSpeed(-6);
       }

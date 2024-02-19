@@ -16,6 +16,10 @@ const Container = styled.div`
   &:hover {
     transform: scale(1.1);
   }
+
+  @media only screen and (max-width: 450px) {
+    padding: 15px 0;
+  }
 `;
 
 const Image = styled.img`

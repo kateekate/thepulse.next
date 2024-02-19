@@ -102,6 +102,10 @@ export const SubHeader = styled.p`
   &:hover {
     animation: ${fillTextAnimation} 0.5s forwards;
   }
+
+  @media only screen and (max-width: 450px) {
+    color: #ffffffab;
+  }
 `;
 
 const VioletTextAnimation = keyframes`
