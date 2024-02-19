@@ -12,7 +12,7 @@ const Container = styled.div`
   padding: 20px 40px;
 
   @media only screen and (max-width: 450px) {
-    padding: 60px 20px 20px;
+    padding: 35px 20px 20px;
   }
 `;
 

@@ -42,7 +42,7 @@ const MainContainer = styled.div`
   gap: 8vw;
 
   @media only screen and (max-width: 450px) {
-    padding-top: 9vw;
+    padding-top: 18vw;
   }
 `;
 

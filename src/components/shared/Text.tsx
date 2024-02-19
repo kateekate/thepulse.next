@@ -23,6 +23,7 @@ export const Text = styled.h2`
   text-transform: uppercase;
 
   @media only screen and (max-width: 450px) {
+    font-size: 2.5vw;
     color: #616161;
   }
 `;

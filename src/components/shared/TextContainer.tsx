@@ -6,6 +6,10 @@ export const TextContainer = styled.div`
   align-items: center;
   gap: 50px;
   z-index: 5;
+
+  @media only screen and (max-width: 450px) {
+    gap: 40px;
+  }
 `;
 
 export const TextContainerWithPadding = styled(TextContainer)`

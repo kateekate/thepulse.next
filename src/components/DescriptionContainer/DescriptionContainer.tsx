@@ -7,6 +7,10 @@ const Container = styled.div`
   align-items: center;
   padding: 0 40px 0 40px;
   gap: 40px;
+
+  @media only screen and (max-width: 450px) {
+    flex-direction: column;
+  }
 `;
 
 export const DescriptionContainer = () => {
