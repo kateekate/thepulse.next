@@ -14,6 +14,8 @@ import {
   TextContainer,
   TextContainerWithPadding,
 } from "@/components/shared/TextContainer";
+import { BodyContainer, MainContainer } from "@/components/shared/Container";
+import VideoBackground from "@/components/VideoBackground/VideoBackground";
 import { DescriptionContainer } from "@/components/DescriptionContainer/DescriptionContainer";
 import { CarouselContainer } from "@/components/CarouselContainer/CarouselContainer";
 import { ImageContainer } from "@/components/shared/ImageContainer";
@@ -24,38 +26,6 @@ import { FeedbackContainer } from "@/components/FeedbackContainer/FeedbackContai
 import { FooterContainer } from "@/components/FooterContainer/FooterContainer";
 import poster1 from "../../public/images/poster1.png";
 import poster2 from "../../public/images/poster2.png";
-
-const BodyContainer = styled.div`
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  outline: none;
-  scroll-behavior: smooth;
-
-  background-color: black;
-  overflow-x: hidden;
-  overflow-y: auto;
-`;
-
-const MainContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding-top: 8vw;
-  gap: 8vw;
-
-  @media only screen and (max-width: 450px) {
-    padding-top: 5vw;
-  }
-`;
-
-const VideoBackground = styled.video`
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  z-index: -1;
-`;
 
 const LandingComponent = () => {
   const [parallaxSpeed, setParallaxSpeed] = useState(-6);
@@ -84,10 +54,7 @@ const LandingComponent = () => {
   return (
     <ParallaxProvider>
       <BodyContainer>
-        <VideoBackground autoPlay muted loop playsInline>
-          <source src={videoSrc} type="video/mp4" />
-        </VideoBackground>
-
+        <VideoBackground src={videoSrc} />
         <Header>Pulse</Header>
         <Header2>From Concept to Creation</Header2>
         <Header3>Innovate. Illuminate. Inspire.</Header3>
