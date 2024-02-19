@@ -18,6 +18,10 @@ const Container = styled.div`
   background-image: url(${Animation1.src});
   background-size: cover;
   background-position: center;
+
+  @media only screen and (max-width: 450px) {
+    justify-content: center;
+  }
 `;
 
 const FlipCardColumn = styled.div`

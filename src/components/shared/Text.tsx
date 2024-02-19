@@ -44,6 +44,10 @@ export const BlurText = styled(MText)`
   backdrop-filter: blur(15px);
   padding: 15px;
   text-align: justify;
+
+  @media only screen and (max-width: 450px) {
+    display: none;
+  }
 `;
 
 export const LText = styled(Text)`

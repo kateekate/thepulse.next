@@ -13,6 +13,10 @@ const Container = styled.div`
   align-items: center;
   height: 100%;
   justify-content: center;
+
+  @media only screen and (max-width: 450px) {
+    width: 200px;
+  }
 `;
 
 const PulsingContainer = styled(Container)`
@@ -40,6 +44,11 @@ const Card = styled(a.div)`
   cursor: pointer;
   will-change: transform, opacity;
   background-size: cover;
+
+  @media only screen and (max-width: 450px) {
+    width: 55vw;
+    height: 18vh;
+  }
 `;
 
 const Front = styled(Card)<{ img: string }>`
