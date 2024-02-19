@@ -21,6 +21,10 @@ const Container = styled.div`
 const Image = styled.img`
   width: 80vw;
   height: auto;
+
+  @media only screen and (max-width: 450px) {
+    width: 90vw;
+  }
 `;
 
 export const ImageContainer = ({ src, alt }: ImageContainerProps) => {

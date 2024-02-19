@@ -21,6 +21,10 @@ const fillTextAnimation2 = keyframes`
 export const Text = styled.h2`
   font-size: 1.3vw;
   text-transform: uppercase;
+
+  @media only screen and (max-width: 450px) {
+    color: #616161;
+  }
 `;
 
 export const MText = styled(Text)`
@@ -44,6 +48,10 @@ export const BlurText = styled(MText)`
 export const LText = styled(Text)`
   font-size: 1.5vw;
   color: #ffffffab;
+
+  @media only screen and (max-width: 450px) {
+    font-size: 2.5vw;
+  }
 `;
 
 export const XlText = styled(Text)`

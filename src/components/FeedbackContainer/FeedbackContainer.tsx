@@ -56,6 +56,10 @@ const StyledModalContent = styled(ModalContent)`
   border-radius: 25px;
   background-color: #ec5b20;
   z-index: 11;
+
+  @media only screen and (max-width: 450px) {
+    width: 85vw;
+  }
 `;
 
 const StyledInput = styled(Input)`

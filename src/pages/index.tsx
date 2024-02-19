@@ -39,6 +39,10 @@ const MainContainer = styled.div`
   flex-direction: column;
   padding-top: 25vw;
   gap: 8vw;
+
+  @media only screen and (max-width: 450px) {
+    padding-top: 9vw;
+  }
 `;
 
 const LandingComponent = () => {

@@ -10,6 +10,10 @@ import CarouselImg4 from "../../../public/images/carouselImg/4.png";
 const Container = styled.div`
   width: 100%;
   padding: 20px 40px;
+
+  @media only screen and (max-width: 450px) {
+    padding: 60px 20px 20px;
+  }
 `;
 
 const SliderContainer = styled.div`
