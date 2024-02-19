@@ -9,6 +9,15 @@ const fillTextAnimation = keyframes`
   }
 `;
 
+const fillTextAnimation2 = keyframes`
+  from {
+    color: #6a6868bf;
+  }
+  to {
+    color: #6a6870;;
+  }
+`;
+
 export const Text = styled.h2`
   font-size: 1.3vw;
   text-transform: uppercase;
@@ -18,8 +27,16 @@ export const MText = styled(Text)`
   font-size: 1rem;
 `;
 
-export const BlurMText = styled(MText)`
-  backdrop-filter: blur(5px);
+export const AnimationText = styled(MText)`
+  font-size: 1rem;
+
+  &:hover {
+    animation: ${fillTextAnimation2} 0.3s forwards;
+  }
+`;
+
+export const BlurText = styled(MText)`
+  backdrop-filter: blur(15px);
   padding: 15px;
   text-align: justify;
 `;

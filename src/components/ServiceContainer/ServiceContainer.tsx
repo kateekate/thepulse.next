@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { LText, MText, XXLText } from "../shared/Text";
+import { AnimationText, LText, XXLText } from "../shared/Text";
 
 const Container = styled.div`
   display: flex;
@@ -24,15 +24,15 @@ export const ServiceContainer = () => {
     <Container>
       <LText>Our Services</LText>
       <TextContainer>
-        <MText>
+        <AnimationText>
           We are gradually adding new functionality and we welcome your
           suggestions and feedback.
-        </MText>
+        </AnimationText>
         <XXLText>Follow time</XXLText>
-        <MText>
+        <AnimationText>
           We invite you to be an integral part of this journey by sharing your
           suggestions with us.
-        </MText>
+        </AnimationText>
       </TextContainer>
       <LText>Our Services</LText>
     </Container>

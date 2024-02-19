@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BlurMText } from "../shared/Text";
+import { BlurText } from "../shared/Text";
 import { FlipCard } from "../FlipCard/FlipCard";
 import Animation1 from "../../../public/images/background.gif";
 import img1 from "../../../public/images/frontImage/img1.png";
@@ -13,7 +13,7 @@ const Container = styled.div`
   flex-direction: row;
   align-items: center;
   text-align: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 20px;
   background-image: url(${Animation1.src});
   background-size: cover;
@@ -40,11 +40,11 @@ export const FlipCardsContainer = () => {
   return (
     <Container>
       <FlipCardRow>
-        <BlurMText>
+        <BlurText>
           Dive into the digital age with bespoke strategies that resonate. From
           SEO to PPC, content marketing to social media, we craft campaigns that
           connect and convert.
-        </BlurMText>
+        </BlurText>
       </FlipCardRow>
       <FlipCardColumn>
         <FlipCard text={"Give"} frontImage={img1.src} />
@@ -53,11 +53,11 @@ export const FlipCardsContainer = () => {
         <FlipCard text={"Inspire"} frontImage={img4.src} />
       </FlipCardColumn>
       <FlipCardRow>
-        <BlurMText>
+        <BlurText>
           Stand out with stunning visuals that tell your brand&apos;s story. Our
           designers dream big, delivering graphics, websites, and branding that
           break the mold. Make your mark on the digital landscape.
-        </BlurMText>
+        </BlurText>
       </FlipCardRow>
     </Container>
   );
