@@ -20,8 +20,9 @@ const dash = keyframes`
 `;
 
 const StyledButton = styled.button`
-  position: fixed;
-  bottom: 60px;
+  position: sticky;
+  bottom: 0;
+
   left: 50%;
   transform: translateX(-50%);
   width: clamp(150px, 270px, 100%);

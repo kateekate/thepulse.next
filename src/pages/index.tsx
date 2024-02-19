@@ -59,37 +59,40 @@ const VideoBackground = styled.video`
 
 const LandingComponent = () => {
   const [parallaxSpeed, setParallaxSpeed] = useState(-6);
+  const [videoSrc, setVideoSrc] = useState("/video/video1080.mp4");
 
   useEffect(() => {
-    const updateParallaxSpeed = () => {
+    const updateParallaxSpeedAndVideo = () => {
       const screenWidth = window.innerWidth;
       if (screenWidth <= 450) {
         setParallaxSpeed(0);
+        setVideoSrc("/video/video450.mp4");
       } else {
         setParallaxSpeed(-6);
+        setVideoSrc("/video/video1080.mp4");
       }
     };
 
-    updateParallaxSpeed();
+    updateParallaxSpeedAndVideo();
 
-    window.addEventListener("resize", updateParallaxSpeed);
+    window.addEventListener("resize", updateParallaxSpeedAndVideo);
 
     return () => {
-      window.removeEventListener("resize", updateParallaxSpeed);
+      window.removeEventListener("resize", updateParallaxSpeedAndVideo);
     };
   }, []);
-
   return (
     <ParallaxProvider>
       <BodyContainer>
         <VideoBackground autoPlay muted loop>
-          <source src="/video/video1080.mp4" type="video/mp4" />
+          <source src={videoSrc} type="video/mp4" />
         </VideoBackground>
         <Header>Pulse</Header>
         <Header2>From Concept to Creation</Header2>
         <Header3>Innovate. Illuminate. Inspire.</Header3>
         <MainContainer>
           <CarouselContainer />
+          <FeedbackContainer />
           <ImageContainer src={poster1.src} alt="poster1" />
           <Parallax speed={parallaxSpeed}>
             <SubHeader>
@@ -119,7 +122,7 @@ const LandingComponent = () => {
           <Parallax speed={parallaxSpeed}>
             <PlayBtnContainer />
           </Parallax>
-          <FeedbackContainer />
+
           <Parallax speed={parallaxSpeed}>
             <FooterContainer />
           </Parallax>
