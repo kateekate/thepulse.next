@@ -77,6 +77,10 @@ export const XXLText = styled(Text)`
   &:hover {
     animation: ${fillTextAnimation} 0.5s forwards;
   }
+
+  @media only screen and (max-width: 450px) {
+    color: #ffffffab;
+  }
 `;
 
 export const Header = styled.h1`

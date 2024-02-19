@@ -17,6 +17,11 @@ const TextContainer = styled.div`
   justify-content: center;
   text-align: justify;
   gap: 40px;
+
+  @media only screen and (max-width: 450px) {
+    width: 80vw;
+    flex-direction: column;
+  }
 `;
 
 export const ServiceContainer = () => {
