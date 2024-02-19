@@ -66,7 +66,7 @@ const LandingComponent = () => {
       const screenWidth = window.innerWidth;
       if (screenWidth <= 450) {
         setParallaxSpeed(0);
-        setVideoSrc("/video/video450.mp4");
+        setVideoSrc("/video/video360.mp4");
       } else {
         setParallaxSpeed(-6);
         setVideoSrc("/video/video1080.mp4");
