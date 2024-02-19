@@ -70,7 +70,6 @@ export const XXLText = styled(Text)`
   font-weight: 800;
   line-height: 1.25;
   text-align: center;
-
   transition: color 0.3s ease;
   cursor: pointer;
 
@@ -80,6 +79,10 @@ export const XXLText = styled(Text)`
 
   @media only screen and (max-width: 450px) {
     color: #ffffffab;
+
+    &:hover {
+      animation: none;
+    }
   }
 `;
 
@@ -100,6 +103,33 @@ export const Header = styled.h1`
   }
 `;
 
+export const Header2 = styled.h1`
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 24vw;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #6a6868bf;
+  font-size: 1.5vw;
+  color: #ffffffab;
+  font-weight: 600;
+  text-transform: uppercase;
+`;
+
+export const Header3 = styled.h1`
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 32vw;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #6a6868bf;
+  font-size: 5vw;
+  font-weight: 600;
+  text-transform: uppercase;
+`;
+
 export const SubHeader = styled.p`
   padding: 0 40px;
   font-size: 5vw;
@@ -117,6 +147,10 @@ export const SubHeader = styled.p`
 
   @media only screen and (max-width: 450px) {
     color: #ffffffab;
+
+    &:hover {
+      animation: none;
+    }
   }
 `;
 
@@ -147,6 +181,12 @@ export const FooterHeader = styled.p`
   }
 
   @media only screen and (max-width: 450px) {
-    color: #ffffffab;
+    width: 90vw;
+    border: none;
+    color: #9078e9cc;
+
+    &:hover {
+      animation: none;
+    }
   }
 `;

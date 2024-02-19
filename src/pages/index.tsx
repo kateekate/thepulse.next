@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import {
   Header,
+  Header2,
+  Header3,
   LText,
   MText,
   SubHeader,
@@ -38,12 +40,21 @@ const BodyContainer = styled.div`
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 25vw;
+  padding-top: 8vw;
   gap: 8vw;
 
   @media only screen and (max-width: 450px) {
-    padding-top: 22vw;
+    padding-top: 5vw;
   }
+`;
+
+const VideoBackground = styled.video`
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
 `;
 
 const LandingComponent = () => {
@@ -71,24 +82,15 @@ const LandingComponent = () => {
   return (
     <ParallaxProvider>
       <BodyContainer>
+        <VideoBackground autoPlay muted loop>
+          <source src="/video/video1080.mp4" type="video/mp4" />
+        </VideoBackground>
         <Header>Pulse</Header>
+        <Header2>From Concept to Creation</Header2>
+        <Header3>Innovate. Illuminate. Inspire.</Header3>
         <MainContainer>
-          <TextContainer>
-            <Parallax speed={parallaxSpeed}>
-              <LText>From Concept to Creation</LText>
-            </Parallax>
-            <Parallax speed={parallaxSpeed}>
-              <SubHeader>Innovate. Illuminate. Inspire.</SubHeader>
-            </Parallax>
-            <Parallax speed={parallaxSpeed}>
-              <DescriptionContainer />
-            </Parallax>
-          </TextContainer>
-
           <CarouselContainer />
-
           <ImageContainer src={poster1.src} alt="poster1" />
-
           <Parallax speed={parallaxSpeed}>
             <SubHeader>
               Think Big & Designing Today for Tomorrow&apos;s Stories
@@ -101,7 +103,6 @@ const LandingComponent = () => {
                 about delivering exceptional experiences that captivate and
                 inspire.
               </XlText>
-
               <MText>
                 We believe in the power of storytelling and its ability to
                 connect people. We are dedicated to creating experiences that
@@ -111,13 +112,10 @@ const LandingComponent = () => {
             </TextContainerWithPadding>
           </Parallax>
           <FlipCardsContainer />
-
           <Parallax speed={parallaxSpeed}>
             <ServiceContainer />
           </Parallax>
-
           <ImageContainer src={poster2.src} alt="poster2" />
-
           <Parallax speed={parallaxSpeed}>
             <PlayBtnContainer />
           </Parallax>
