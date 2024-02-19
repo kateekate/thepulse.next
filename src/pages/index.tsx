@@ -84,9 +84,10 @@ const LandingComponent = () => {
   return (
     <ParallaxProvider>
       <BodyContainer>
-        <VideoBackground autoPlay muted loop>
+        <VideoBackground autoPlay muted loop playsInline>
           <source src={videoSrc} type="video/mp4" />
         </VideoBackground>
+
         <Header>Pulse</Header>
         <Header2>From Concept to Creation</Header2>
         <Header3>Innovate. Illuminate. Inspire.</Header3>
