@@ -63,8 +63,15 @@ const StyledInput = styled(Input)`
   border: 2px dashed black;
   margin-bottom: 20px;
   border-radius: 25px;
+
   &::placeholder {
     color: black;
+  }
+
+  &:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
   }
 `;
 
@@ -73,8 +80,15 @@ const StyledTextarea = styled(Textarea)`
   border: 2px dashed black;
   margin-bottom: 20px;
   border-radius: 25px;
+
   &::placeholder {
     color: black;
+  }
+
+  &:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
   }
 `;
 
