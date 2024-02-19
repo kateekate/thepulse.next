@@ -90,6 +90,10 @@ export const Header = styled.h1`
   font-size: 29vw;
   font-weight: 800;
   text-transform: uppercase;
+
+  @media only screen and (max-width: 450px) {
+    font-size: 31vw;
+  }
 `;
 
 export const SubHeader = styled.p`
