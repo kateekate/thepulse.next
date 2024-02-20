@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import {
   Modal,
@@ -116,6 +116,20 @@ const SendButton = styled(Button)`
 
 export const FeedbackContainer = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const position = window.scrollY;
+      setIsSticky(position > 500);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const formRef = useRef<HTMLFormElement>(null); // HTMLFormElement для указания типа ref
 
@@ -153,7 +167,17 @@ export const FeedbackContainer = () => {
 
   return (
     <>
-      {!isOpen && <StyledButton onClick={onOpen}>Check the pulse</StyledButton>}
+      {!isOpen && (
+        <StyledButton
+          onClick={onOpen}
+          style={{
+            position: isSticky ? "fixed" : "absolute",
+            bottom: isSticky ? "65px" : "0",
+          }}
+        >
+          Check the pulse
+        </StyledButton>
+      )}
       <Modal
         isOpen={isOpen}
         onClose={onClose}
