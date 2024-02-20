@@ -19,6 +19,7 @@ const SButton = styled.button`
   cursor: pointer;
   z-index: 10;
   overflow: hidden;
+  box-shadow: 0px 4px 10px rgb(0 0 0 / 78%);
   &::after {
     content: "";
     position: absolute;
@@ -31,7 +32,7 @@ const UpwardsArrow = styled(ArrowRightIcon)`
   transform: rotate(270deg) translateX(-45%);
   width: 100%;
   height: 46px;
-  color: white;
+  color: #ffffffd6;
   animation: swipe-up-animation 1.5s ease-in-out infinite;
 
   @keyframes swipe-up-animation {
