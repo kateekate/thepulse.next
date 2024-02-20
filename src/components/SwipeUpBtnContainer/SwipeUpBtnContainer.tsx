@@ -28,12 +28,10 @@ const SButton = styled.button`
 
 const UpwardsArrow = styled(ArrowRightIcon)`
   position: fixed;
-  // bottom: 335px;
   transform: rotate(270deg) translateX(-45%);
   width: 100%;
   height: 46px;
   color: white;
-
   animation: swipe-up-animation 1.5s ease-in-out infinite;
 
   @keyframes swipe-up-animation {
