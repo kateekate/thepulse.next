@@ -121,7 +121,7 @@ export const FeedbackContainer = () => {
   useEffect(() => {
     const handleScroll = () => {
       const position = window.scrollY;
-      setIsSticky(position > window.innerHeight);
+      setIsSticky(position > 200);
     };
 
     window.addEventListener("scroll", handleScroll);
