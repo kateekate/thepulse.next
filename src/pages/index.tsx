@@ -25,6 +25,7 @@ import { FeedbackContainer } from "@/components/FeedbackContainer/FeedbackContai
 import { FooterContainer } from "@/components/FooterContainer/FooterContainer";
 import poster1 from "../../public/images/poster1.png";
 import poster2 from "../../public/images/poster2.png";
+import { SwipeUpBtnContainer } from "@/components/SwipeUpBtnContainer/SwipeUpBtnContainer";
 
 const LandingComponent = () => {
   const [parallaxSpeed, setParallaxSpeed] = useState(-6);
@@ -59,6 +60,7 @@ const LandingComponent = () => {
         <Header3>From Concept to Creation</Header3>
         <MainContainer>
           <CarouselContainer />
+          <SwipeUpBtnContainer />
           <FeedbackContainer />
           <ImageContainer src={poster1.src} alt="poster1" />
           <Parallax speed={parallaxSpeed}>
@@ -89,7 +91,6 @@ const LandingComponent = () => {
           <Parallax speed={parallaxSpeed}>
             <PlayBtnContainer />
           </Parallax>
-
           <Parallax speed={parallaxSpeed}>
             <FooterContainer />
           </Parallax>

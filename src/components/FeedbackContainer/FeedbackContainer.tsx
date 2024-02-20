@@ -19,7 +19,7 @@ const dash = keyframes`
   }
 `;
 
-const StyledButton = styled.button`
+const SButton = styled.button`
   position: sticky;
   bottom: 0;
 
@@ -49,7 +49,7 @@ const StyledButton = styled.button`
   }
 `;
 
-const StyledModalContent = styled(ModalContent)`
+const SModalContent = styled(ModalContent)`
   position: fixed;
   width: auto;
   max-width: 600px;
@@ -63,7 +63,7 @@ const StyledModalContent = styled(ModalContent)`
   }
 `;
 
-const StyledInput = styled(Input)`
+const SInput = styled(Input)`
   background: transparent;
   border: 2px dashed black;
   margin-bottom: 20px;
@@ -80,7 +80,7 @@ const StyledInput = styled(Input)`
   }
 `;
 
-const StyledTextarea = styled(Textarea)`
+const STextarea = styled(Textarea)`
   background: transparent;
   border: 2px dashed black;
   margin-bottom: 20px;
@@ -168,7 +168,7 @@ export const FeedbackContainer = () => {
   return (
     <>
       {!isOpen && (
-        <StyledButton
+        <SButton
           onClick={onOpen}
           style={{
             position: isSticky ? "fixed" : "absolute",
@@ -176,7 +176,7 @@ export const FeedbackContainer = () => {
           }}
         >
           Check the pulse
-        </StyledButton>
+        </SButton>
       )}
       <Modal
         isOpen={isOpen}
@@ -185,21 +185,21 @@ export const FeedbackContainer = () => {
         isCentered={true}
       >
         <ModalOverlay backdropBlur="0" />
-        <StyledModalContent>
+        <SModalContent>
           <ModalHeader textTransform="uppercase" color="black" fontWeight="800">
             Feedback
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody paddingBottom="20px">
             <form onSubmit={handleSubmit} ref={formRef}>
-              <StyledInput name="name" placeholder="Name" />
-              <StyledInput name="email" placeholder="Email" />
-              <StyledInput name="companyName" placeholder="Company" />
-              <StyledTextarea name="message" placeholder="Message" />
+              <SInput name="name" placeholder="Name" />
+              <SInput name="email" placeholder="Email" />
+              <SInput name="companyName" placeholder="Company" />
+              <STextarea name="message" placeholder="Message" />
               <SendButton type="submit">Send</SendButton>
             </form>
           </ModalBody>
-        </StyledModalContent>
+        </SModalContent>
       </Modal>
     </>
   );
