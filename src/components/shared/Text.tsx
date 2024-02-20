@@ -103,11 +103,11 @@ export const Header = styled.h1`
   }
 `;
 
-export const Header2 = styled.h1`
+export const Header3 = styled.h1`
   width: 100%;
   position: absolute;
   text-align: center;
-  top: 24vw;
+  top: 37vw;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #6a6868bf;
@@ -117,7 +117,7 @@ export const Header2 = styled.h1`
   text-transform: uppercase;
 `;
 
-export const Header3 = styled.h1`
+export const Header2 = styled.h1`
   width: 100%;
   position: absolute;
   text-align: center;

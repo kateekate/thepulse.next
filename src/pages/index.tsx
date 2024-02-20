@@ -55,8 +55,8 @@ const LandingComponent = () => {
       <BodyContainer>
         <VideoBackground src={videoSrc} />
         <Header>Pulse</Header>
-        <Header2>From Concept to Creation</Header2>
-        <Header3>Innovate. Illuminate. Inspire.</Header3>
+        <Header2>Innovate. Illuminate. Inspire.</Header2>
+        <Header3>From Concept to Creation</Header3>
         <MainContainer>
           <CarouselContainer />
           <FeedbackContainer />
