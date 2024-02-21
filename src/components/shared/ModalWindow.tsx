@@ -21,6 +21,6 @@ export const SVideoContent = styled(SModalContent)`
   border-radius: 0;
 
   @media only screen and (max-width: 450px) {
-    height: auto;
+    height: 55vh;
   }
 `;
