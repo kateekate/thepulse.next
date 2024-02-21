@@ -32,7 +32,7 @@ const UpwardsArrow = styled(ArrowRightIcon)`
   transform: rotate(270deg) translateX(-45%);
   width: 100%;
   height: 46px;
-  color: #ffffffd6;
+  color: #ffffff91;
   animation: swipe-up-animation 1.5s ease-in-out infinite;
 
   @keyframes swipe-up-animation {
