@@ -23,13 +23,26 @@ import { ServiceContainer } from "@/components/ServiceContainer/ServiceContainer
 import { PlayBtnContainer } from "@/components/PlayBtnContainer/PlayBtnContainer";
 import { FeedbackContainer } from "@/components/FeedbackContainer/FeedbackContainer";
 import { FooterContainer } from "@/components/FooterContainer/FooterContainer";
+import { SwipeUpBtnContainer } from "@/components/SwipeUpBtnContainer/SwipeUpBtnContainer";
 import poster1 from "../../public/images/poster1.png";
 import poster2 from "../../public/images/poster2.png";
-import { SwipeUpBtnContainer } from "@/components/SwipeUpBtnContainer/SwipeUpBtnContainer";
 
 const LandingComponent = () => {
   const [parallaxSpeed, setParallaxSpeed] = useState(-6);
   const [videoSrc, setVideoSrc] = useState("/video/video1080.mp4");
+  const [showSwipeUpBtn, setShowSwipeUpBtn] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setShowSwipeUpBtn(window.innerWidth < 450);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const updateParallaxSpeedAndVideo = () => {
@@ -51,6 +64,7 @@ const LandingComponent = () => {
       window.removeEventListener("resize", updateParallaxSpeedAndVideo);
     };
   }, []);
+
   return (
     <ParallaxProvider>
       <BodyContainer>
@@ -60,7 +74,7 @@ const LandingComponent = () => {
         <Header3>From Concept to Creation</Header3>
         <MainContainer>
           <CarouselContainer />
-          <SwipeUpBtnContainer />
+          {showSwipeUpBtn && <SwipeUpBtnContainer />}
           <FeedbackContainer />
           <ImageContainer src={poster1.src} alt="poster1" />
           <Parallax speed={parallaxSpeed}>
