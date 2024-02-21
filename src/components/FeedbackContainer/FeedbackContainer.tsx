@@ -3,7 +3,6 @@ import styled, { keyframes } from "styled-components";
 import {
   Modal,
   ModalOverlay,
-  ModalContent,
   ModalHeader,
   ModalCloseButton,
   ModalBody,
@@ -11,6 +10,7 @@ import {
   Textarea,
   Button,
 } from "@chakra-ui/react";
+import { SModalContent } from "../shared/ModalWindow";
 
 const dash = keyframes`
   0%, 100% {
@@ -46,20 +46,6 @@ const SButton = styled.button`
 
   &:hover::after {
     animation: ${dash} 3s linear infinite;
-  }
-`;
-
-const SModalContent = styled(ModalContent)`
-  position: fixed;
-  width: auto;
-  max-width: 600px;
-  margin: 0 auto;
-  border-radius: 25px;
-  background-color: #ec5b20;
-  z-index: 11;
-
-  @media only screen and (max-width: 450px) {
-    width: 85vw;
   }
 `;
 

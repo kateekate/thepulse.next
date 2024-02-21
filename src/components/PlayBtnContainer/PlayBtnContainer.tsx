@@ -1,6 +1,15 @@
+import { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { TriangleUpIcon } from "@chakra-ui/icons";
 
+import {
+  Modal,
+  ModalOverlay,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+} from "@chakra-ui/react";
+import { SVideoContent } from "../shared/ModalWindow";
 import backgroundImg from "../../../public/images/playContainerImg/background.jpeg";
 
 const Container = styled.div`
@@ -110,18 +119,51 @@ const CustomIconButton = styled.button`
 `;
 
 export const PlayBtnContainer = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const handlePlay = () => {
+    setIsPlaying(true);
+  };
+
+  const onClose = () => setIsOpen(false);
+  const onOpen = () => setIsOpen(true);
+
   return (
     <Container>
       <InnerContainer>
-        <ButtonWrapper>
-          <CustomIconButton type="button" onClick={() => console.log("Play")}>
-            <TriangleUpIcon
-              transform="rotate(90deg)"
-              boxSize="20px"
-              color={"white"}
-            />
-          </CustomIconButton>
-        </ButtonWrapper>
+        {isOpen ? (
+          <Modal
+            isOpen={isOpen}
+            onClose={onClose}
+            blockScrollOnMount={true}
+            isCentered={true}
+          >
+            <ModalOverlay />
+            <SVideoContent>
+              <ModalCloseButton color="#ec5b20" />
+              <ModalBody padding="8px" width="85vw">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/oZAot9EZFM0?autoplay=1"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </ModalBody>
+            </SVideoContent>
+          </Modal>
+        ) : (
+          <ButtonWrapper>
+            <CustomIconButton type="button" onClick={onOpen}>
+              <TriangleUpIcon
+                transform="rotate(90deg)"
+                boxSize="20px"
+                color={"white"}
+              />
+            </CustomIconButton>
+          </ButtonWrapper>
+        )}
       </InnerContainer>
       <Line />
     </Container>
