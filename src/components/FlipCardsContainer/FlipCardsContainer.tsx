@@ -54,7 +54,7 @@ export const FlipCardsContainer = () => {
         <FlipCard text={"Give"} frontImage={img1.src} />
         <FlipCard text={"Us"} frontImage={img2.src} />
         <FlipCard text={"Your"} frontImage={img3.src} />
-        <FlipCard text={"Inspire"} frontImage={img4.src} />
+        <FlipCard text={"Inspiration"} frontImage={img4.src} />
       </FlipCardColumn>
       <FlipCardRow>
         <BlurText>

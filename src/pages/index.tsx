@@ -4,7 +4,6 @@ import {
   Header,
   Header2,
   Header3,
-  LText,
   MText,
   SubHeader,
   XlText,
@@ -79,13 +78,13 @@ const LandingComponent = () => {
           <ImageContainer src={poster1.src} alt="poster1" />
           <Parallax speed={parallaxSpeed}>
             <SubHeader>
-              Think Big & Designing Today for Tomorrow&apos;s Stories
+              Think Big & Design Today for Tomorrow&apos;s Stories
             </SubHeader>
           </Parallax>
           <Parallax speed={parallaxSpeed}>
             <TextContainerWithPadding>
               <XlText>
-                Our team of creative minds and technical experts are passionate
+                Our team of creative minds and technical experts is passionate
                 about delivering exceptional experiences that captivate and
                 inspire.
               </XlText>
